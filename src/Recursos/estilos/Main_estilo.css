@@ -1,0 +1,47 @@
+#AnchorPane{
+    -fx-background-color: #F7FAFB;
+}
+
+.btn_animacion1{
+    -fx-background-color: #2C5462;
+    -fx-text-fill: #fff;
+}
+
+.btn_animacion1:hover{
+    -fx-background-color: #FF5733;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: transparent transparent #2C5462 transparent;
+    -fx-cursor: hand;
+}
+
+.encabezado{
+    -fx-background-color: #2C5462;
+    -fx-text-fill: #fff;
+}
+
+.txtDatos{
+    -fx-border-color: blue;
+    -fx-border-radius: 50;
+    
+}
+
+#pane1{
+    -fx-background-image: url("/Recursos/imagenes/slider1-700x400.jpg");
+}
+
+#pane2{
+    -fx-background-image: url("/Recursos/imagenes/slider2-700x400.jpg");
+}
+
+#pane3{
+    -fx-background-image: url("/Recursos/imagenes/slider3-700x400.jpg");
+}
+
+.panel{
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 760 450; 
+}
+
+#veamos{
+    -fx-background-color: yellow;
+}
