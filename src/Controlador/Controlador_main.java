@@ -36,6 +36,8 @@ public class Controlador_main implements Initializable {
     private Button button;
     @FXML
     private JFXButton btn_logoSlides;
+    @FXML
+    private JFXButton btn_homepage;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -72,4 +74,17 @@ public class Controlador_main implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
     }    
+
+    @FXML
+    private void Form_Home_Page(ActionEvent event) throws IOException{
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane animacion1 = (AnchorPane)loader.load(getClass().getResource("/Vista/FXML_HomePage.fxml").openStream());
+        Scene scene = new Scene(animacion1);
+        scene.getStylesheets().addAll(getClass().getResource("/Recursos/estilos/Main_estilo.css").toExternalForm());
+        stage.setScene(scene);
+        stage.alwaysOnTopProperty();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.show();
+    }
 }

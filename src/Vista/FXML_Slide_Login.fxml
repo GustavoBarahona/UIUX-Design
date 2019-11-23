@@ -19,7 +19,7 @@
          </effect>
          <children>
             <Label layoutX="108.0" layoutY="55.0" text="LOGIN" />
-            <JFXTextField fx:id="txt_UserName" alignment="CENTER" focusColor="#405aa800" labelFloat="true" layoutX="46.0" layoutY="100.0" prefWidth="160.0" promptText="USERNAME" styleClass="txtDatos" stylesheets="@../Recursos/estilos/Main_estilo.css" unFocusColor="#4d4d4d00" />
+            <JFXTextField fx:id="txt_UserName" alignment="CENTER" focusColor="#405aa800" labelFloat="true" layoutX="46.0" layoutY="100.0" prefWidth="160.0" promptText="USERNAME" styleClass="txtDatos" unFocusColor="#4d4d4d00" />
             <JFXTextField alignment="CENTER" focusColor="#405aa800" labelFloat="true" layoutX="46.0" layoutY="155.0" prefHeight="27.0" prefWidth="160.0" promptText="PASSWORD" styleClass="txtDatos" unFocusColor="#4d4d4d00" />
             <JFXButton layoutX="46.0" layoutY="217.0" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: skyblue; -fx-background-radius: 50;" text="Star" textFill="#ebe8e8">
                <font>
