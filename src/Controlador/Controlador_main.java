@@ -66,8 +66,8 @@ public class Controlador_main implements Initializable {
     private void FormLogoSlide(ActionEvent event) throws IOException{
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        AnchorPane animacion1 = (AnchorPane)loader.load(getClass().getResource("/Vista/FXML_Slide_Login.fxml").openStream());
-        Scene scene = new Scene(animacion1);
+        AnchorPane animacion2 = (AnchorPane)loader.load(getClass().getResource("/Vista/FXML_Slide_Login.fxml").openStream());
+        Scene scene = new Scene(animacion2);
         scene.getStylesheets().addAll(getClass().getResource("/Recursos/estilos/Main_estilo.css").toExternalForm());
         stage.setScene(scene);
         stage.alwaysOnTopProperty();
@@ -79,8 +79,8 @@ public class Controlador_main implements Initializable {
     private void Form_Home_Page(ActionEvent event) throws IOException{
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        AnchorPane animacion1 = (AnchorPane)loader.load(getClass().getResource("/Vista/FXML_Home.fxml").openStream());
-        Scene scene = new Scene(animacion1);
+        AnchorPane home = (AnchorPane)loader.load(getClass().getResource("/Vista/FXML_Home.fxml").openStream());
+        Scene scene = new Scene(home);
         scene.getStylesheets().addAll(getClass().getResource("/Recursos/estilos/Home.css").toExternalForm());
         stage.setScene(scene);
         stage.alwaysOnTopProperty();
