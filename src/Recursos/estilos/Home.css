@@ -1,0 +1,23 @@
+#AnchorPaneHome{
+    -fx-background-color: #F7FAFB;    
+}
+
+#pane1{
+    -fx-background-image: url("/Recursos/imagenes/1.jpg");
+}
+
+#pane2{
+    -fx-background-image: url("/Recursos/imagenes/2.jpg");
+}
+
+#pane3{
+    -fx-background-image: url("/Recursos/imagenes/3.jpg");
+}
+
+#pane4{
+    -fx-background-image: url("/Recursos/imagenes/4.jpg");
+}
+
+.titulo{
+    -fx-background-color: #6666FF;
+}
