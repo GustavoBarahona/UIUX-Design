@@ -1,12 +1,15 @@
 package Controlador;
 
+import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.FadeTransition;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
@@ -28,15 +31,68 @@ public class FXML_HomeController implements Initializable {
 
     @FXML
     private ImageView ImageV;
+    @FXML
+    private JFXButton btn_seccion1;
+    @FXML
+    private AnchorPane opacityPane;
+    @FXML
+    private AnchorPane drawerPane;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        opacityPane.setVisible(false);
+
+        FadeTransition fade = new FadeTransition(Duration.seconds(0.5), opacityPane);
+        fade.setFromValue(1);
+        fade.setToValue(0);
+        fade.play();
+
+        TranslateTransition animacionMenu = new TranslateTransition(Duration.seconds(0.5), drawerPane);
+        animacionMenu.setByX(-200);
+        animacionMenu.play();
+
         Image image = new Image("Recursos/iconos/drawer.png");
         ImageV.setImage(image);
         animacion();
+
+        ImageV.setOnMouseClicked(evento1 -> {
+
+            opacityPane.setVisible(true);
+            
+            FadeTransition fade2 = new FadeTransition(Duration.seconds(0.5), opacityPane);
+            fade2.setFromValue(0);
+            fade2.setToValue(0.39);
+            fade2.play();
+
+            TranslateTransition animacionMenu1 = new TranslateTransition(Duration.seconds(0.5), drawerPane);
+            animacionMenu1.setByX(+200);
+            animacionMenu1.play();
+        });
+        
+        
+        opacityPane.setOnMouseClicked(evento1 -> {
+
+            
+            
+            FadeTransition fade2 = new FadeTransition(Duration.seconds(0.5), opacityPane);
+            fade2.setFromValue(0.39);
+            fade2.setToValue(0);
+            fade2.play();
+            
+            fade2.setOnFinished(evento3 ->{
+                opacityPane.setVisible(false);
+            });
+
+            TranslateTransition animacionMenu1 = new TranslateTransition(Duration.seconds(0.5), drawerPane);
+            animacionMenu1.setByX(-200);
+            animacionMenu1.play();
+            
+            
+        });
+
     }
 
     public void animacion() {
@@ -89,6 +145,10 @@ public class FXML_HomeController implements Initializable {
                 });
             });
         });
+    }//Fin animación principal.
+
+    @FXML
+    private void menu(MouseEvent event) {
     }
 
 }
