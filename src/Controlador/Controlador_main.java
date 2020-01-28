@@ -1,10 +1,5 @@
 package Controlador;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
@@ -38,13 +33,10 @@ public class Controlador_main implements Initializable {
     private JFXButton btn_logoSlides;
     @FXML
     private JFXButton btn_homepage;
-    
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private JFXButton btn_TableTreeView;
     
+        
     @FXML
     private void animacion_slides(ActionEvent event) throws IOException {
         Stage stage = new Stage();
@@ -82,6 +74,18 @@ public class Controlador_main implements Initializable {
         AnchorPane home = (AnchorPane)loader.load(getClass().getResource("/Vista/FXML_Home.fxml").openStream());
         Scene scene = new Scene(home);
         scene.getStylesheets().addAll(getClass().getResource("/Recursos/estilos/Home.css").toExternalForm());
+        stage.setScene(scene);
+        stage.alwaysOnTopProperty();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.show();
+    }
+
+    @FXML
+    private void Form_TableTreeView(ActionEvent event) throws IOException{
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane home = (AnchorPane)loader.load(getClass().getResource("/Vista/FXML_TableTreeView.fxml").openStream());
+        Scene scene = new Scene(home);
         stage.setScene(scene);
         stage.alwaysOnTopProperty();
         stage.initModality(Modality.APPLICATION_MODAL);
